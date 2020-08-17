@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhumio Task</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <h2 class="center">Bhumio Task</h2>
+    <div style="overflow-y: auto; max-height: 30vh;">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Full Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>No-Data</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="center">
+      <button class="showForm" onclick="showForm()">Add User</button>
+    </div>
+    <div class="center formDiv">
+      <form target="dummyframe" onsubmit="return addUser()">
+        <label for="fname">Full Name</label>
+        <input required type="text" id="fname" placeholder="Your Full Name" />
+        <label for="email">Email</label>
+        <input
+          required
+          type="email"
+          id="email"
+          placeholder="Your Email Address"
+        />
+        <div class="center">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <script src="app.js"></script>
+  </body>
+</html>
