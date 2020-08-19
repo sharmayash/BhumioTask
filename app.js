@@ -22,14 +22,23 @@ const createNewUser = (fname, email, id) => {
   cell1.innerHTML = id
   cell2.innerHTML = fname
   cell3.innerHTML = email
-  tr.onclick = () => {
-    alert(`
-      User Details are :-
-      Id :- ${id},
-      Full Name :- ${fname},
-      Email Address :- ${email}
-    `)
+  cell1.onclick = () => {
+    alert(`Id :- ${id}`)
   }
+  cell2.onclick = () => {
+    alert(`Full Name :- ${fname}`)
+  }
+  cell3.onclick = () => {
+    alert(`Email Address :- ${email}`)
+  }
+  // tr.onclick = () => {
+  //   alert(`
+  //     User Details are :-
+  //     Id :- ${id},
+  //     Full Name :- ${fname},
+  //     Email Address :- ${email}
+  //   `)
+  // }
 }
 
 const showForm = () => {
